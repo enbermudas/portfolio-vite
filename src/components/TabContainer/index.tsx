@@ -17,7 +17,11 @@ const getCurrentTab = (tab: AppTabs) => {
 };
 
 const TabContainer = ({ activeTab }: TabContainerProps) => {
-  return <Container className="w-full">{getCurrentTab(activeTab)}</Container>;
+  return (
+    <Container className="w-full" noPadding>
+      {getCurrentTab(activeTab)}
+    </Container>
+  );
 };
 
 export default TabContainer;

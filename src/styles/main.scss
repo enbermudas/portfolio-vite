@@ -1,11 +1,62 @@
-@import url('https://fonts.cdnfonts.com/css/uni-neue');
+@import url("https://fonts.cdnfonts.com/css/uni-neue");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Legal Disclaimer
+ *
+ * These web fonts are licensed exclusively for use on the following:
+ * spotify.com
+ *
+ * It is strictly forbidden to download or use these fonts on any other website domain or media.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2018
+ */
+
+/*
+ *
+ * INSTRUCTIONS
+ *
+ * Copy the Legal Disclaimer and the @font-faces statements to your regular CSS file.
+ * The fonts folder(s) should be placed relative to the regular CSS file.
+ *
+ */
+
+@font-face {
+  font-family: "CircularSp";
+  src: url("../assets/fonts/Circular Sp Ara Web Black.woff2") format("woff2");
+  font-weight: black;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CircularSp";
+  src: url("../assets/fonts/Circular Sp Ara Web Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CircularSp";
+  src: url("../assets/fonts/Circular Sp Ara Web Light.woff2") format("woff2");
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CircularSp";
+  src: url("../assets/fonts/Circular Sp Ara Web Medium.woff2") format("woff2");
+  font-weight: medium;
+  font-style: normal;
+}
+
 * {
-  font-family: "Uni Neue", sans-serif;
+  font-family: "CircularSp";
 }
 
 body {

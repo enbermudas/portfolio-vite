@@ -4,6 +4,7 @@ export default {
   theme: {
     colors: {
       background: {
+        profile: "#535353",
         base: "#121212",
         highlight: "#1a1a1a",
         press: "#000",
