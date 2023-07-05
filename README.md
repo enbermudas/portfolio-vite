@@ -8,9 +8,9 @@
 - [ ] Key bindings for easier navigation
 - [ ] Skeleton for lazy loading
 - [ ] Interactive guide
-- [ ] Unit tests
+- [x] Unit tests
 - [ ] Integration tests
-- [ ] Code coverage
+- [x] Code coverage
 
 ## Contact
 
