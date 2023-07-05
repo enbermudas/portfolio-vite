@@ -25,6 +25,7 @@ export default {
         warning: "#ffa42b",
         positive: "#1ed760",
         announcement: "#3d91f4",
+        subtle: "#b3b3b3",
       },
       essential: {
         base: "#fff",
