@@ -4,5 +4,8 @@
   "semi": true,
   "printWidth": 120,
   "bracketSpacing": true,
-  "endOfLine": "crlf"
+  "endOfLine": "crlf",
+  "importOrder": ["^@/components/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

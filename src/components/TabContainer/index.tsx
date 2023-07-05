@@ -1,8 +1,7 @@
+import { AppTabs } from "../../App";
 import Container from "../Container";
 import Home from "./Home";
 import Search from "./Search";
-
-import { AppTabs } from "../../App";
 
 interface TabContainerProps {
   activeTab: AppTabs;

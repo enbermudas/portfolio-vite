@@ -1,14 +1,13 @@
-import classNames from "classnames";
-import { HomeIcon as HomeIconSolid } from "@heroicons/react/24/solid";
 import { MagnifyingGlassCircleIcon } from "@heroicons/react/20/solid";
 import {
   HomeIcon as HomeIconOutline,
   MagnifyingGlassIcon as MagnifyingGlassIconOutline,
 } from "@heroicons/react/24/outline";
-
-import Container from "./Container";
+import { HomeIcon as HomeIconSolid } from "@heroicons/react/24/solid";
+import classNames from "classnames";
 
 import { AppTabs } from "../App";
+import Container from "./Container";
 
 interface MainMenuProps {
   activeTab: AppTabs;

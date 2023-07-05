@@ -1,7 +1,8 @@
 import { useState } from "react";
-import MainMenu from "./components/MainMenu";
-import QuickAccessMenu from "./components/QuickAccessMenu";
-import TabContainer from "./components/TabContainer";
+
+import MainMenu from "@/components/MainMenu";
+import QuickAccessMenu from "@/components/QuickAccessMenu";
+import TabContainer from "@/components/TabContainer";
 
 export enum AppTabs {
   HOME,
