@@ -1,9 +1,5 @@
-import { MagnifyingGlassCircleIcon } from "@heroicons/react/20/solid";
-import {
-  HomeIcon as HomeIconOutline,
-  MagnifyingGlassIcon as MagnifyingGlassIconOutline,
-} from "@heroicons/react/24/outline";
-import { HomeIcon as HomeIconSolid } from "@heroicons/react/24/solid";
+import { faHouse, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 
 import { AppTabs } from "../App";
@@ -30,22 +26,14 @@ const MainMenu = ({ activeTab, onMenuButtonClick }: MainMenuProps) => {
       <ul className="p-2 py-3 text-base font-bold">
         <li className="pb-4">
           <button className={homeButtonClasses} onClick={() => onMenuButtonClick(AppTabs.HOME)}>
-            {activeTab === AppTabs.HOME ? (
-              <HomeIconSolid className="inline h-6" />
-            ) : (
-              <HomeIconOutline className="inline h-6" />
-            )}
+            <FontAwesomeIcon icon={faHouse} className="inline h-6" />
             <span className="flex content-center items-center">Inicio</span>
           </button>
         </li>
 
         <li>
           <button className={searchButtonClasses} onClick={() => onMenuButtonClick(AppTabs.SEARCH)}>
-            {activeTab === AppTabs.SEARCH ? (
-              <MagnifyingGlassCircleIcon className="inline h-6" />
-            ) : (
-              <MagnifyingGlassIconOutline className="inline h-6" />
-            )}
+            <FontAwesomeIcon icon={faMagnifyingGlass} className="inline h-6" />
             <span className="flex content-center items-center">Buscar</span>
           </button>
         </li>

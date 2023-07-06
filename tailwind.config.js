@@ -5,6 +5,7 @@ export default {
     colors: {
       background: {
         profile: "#535353",
+        section: "#181818",
         base: "#121212",
         highlight: "#1a1a1a",
         press: "#000",

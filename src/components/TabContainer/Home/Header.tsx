@@ -1,6 +1,6 @@
 import avatarImg from "@/assets/images/avatar.jpeg";
 
-const Home = () => {
+const Header = () => {
   return (
     <div className="bg-background-profile h-96 p-6 flex relative">
       <div className="bg-gradient-to-b from-[transparent] to-background-elevatedBase w-full h-full absolute left-0 bottom-0 z-0"></div>
@@ -16,9 +16,9 @@ const Home = () => {
           <h1 className="text-8xl font-black text-text-base tracking-tighter py-4">enbermudas</h1>
 
           <div className="text-sm font-medium">
-            <span>35 listas públicas</span>
-            <span className="before:content-['•'] before:m-2">7 seguidores</span>
-            <span className="before:content-['•'] before:m-2">Sigue a 54 usuarios</span>
+            <span>ingeniero en sistemas</span>
+            <span className="before:content-['•'] before:m-2">desarrollador frontend</span>
+            <span className="before:content-['•'] before:m-2">27 años</span>
           </div>
         </div>
       </div>
@@ -26,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Header;
