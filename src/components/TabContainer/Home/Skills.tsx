@@ -1,6 +1,7 @@
 import noise from "@/assets/images/noise.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import { CSSProperties } from "react";
 import { useWindowSize } from "usehooks-ts";
 
 import skillsData from "./skills.data";
@@ -10,7 +11,8 @@ const SkillCard = ({ id, name, level, color, icon }: Skill) => {
   return (
     <div
       id={id}
-      className={`rounded-lg bg-background-section h-72 p-4 flex flex-col items-center relative hover:bg-background-highlight hover:text-[${color}] transition ease-in-out`}
+      className={`rounded-lg bg-background-section h-72 p-4 flex flex-col items-center relative hover:bg-background-highlight hover:text-[color:--color] transition ease-in-out`}
+      style={{ "--color": color } as CSSProperties}
     >
       <FontAwesomeIcon
         icon={icon}
@@ -58,8 +60,8 @@ const Skills = () => {
       </div>
 
       <div
-        className={`min-w-[372px] w-full gap-6 grid`}
-        style={{ gridTemplateColumns: `repeat(${colsCount},minmax(0,1fr))` }}
+        className={`min-w-[372px] w-full gap-6 grid grid-cols-[repeat(var(--colsCount),minmax(0,1fr))]`}
+        style={{ "--colsCount": colsCount } as CSSProperties}
       >
         {!!skillsData.length &&
           skillsData.slice(0, colsCount).map((skill) => {
