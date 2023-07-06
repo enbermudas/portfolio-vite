@@ -13,7 +13,7 @@ const Header = () => {
         <div className="content flex-grow flex flex-col justify-end">
           <span className="text-sm font-bold">Perfil</span>
 
-          <h1 className="text-8xl font-black text-text-base tracking-tighter py-4">enbermudas</h1>
+          <h1 className="text-8xl font-black text-text-base tracking-tighter py-4">e.bermudez</h1>
 
           <div className="text-sm font-medium">
             <span>ingeniero en sistemas</span>
