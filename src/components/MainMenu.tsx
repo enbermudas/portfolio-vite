@@ -24,7 +24,7 @@ const MainMenu = ({ activeTab, onMenuButtonClick }: MainMenuProps) => {
   return (
     <Container>
       <ul className="p-2 py-3 text-base font-bold">
-        <li className="pb-4">
+        <li className="mb-8">
           <button className={homeButtonClasses} onClick={() => onMenuButtonClick(AppTabs.HOME)}>
             <FontAwesomeIcon icon={faHouse} className="inline h-6" />
             <span className="flex content-center items-center">Inicio</span>

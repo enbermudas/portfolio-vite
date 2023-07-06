@@ -1,11 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { experienceColumns, projectsColumns, socialLinks } from "./footer.data";
+import experienceData from "./experience.data";
+import type { ExperienceData } from "./experience.data";
+import { projectsColumns, socialLinks } from "./footer.data";
 import type { FooterElement, FooterSocialLink as SocialLinkType } from "./footer.data";
 
 interface FooterColumnProps {
   title: string;
-  elements: FooterElement[];
+  elements: FooterElement[] | ExperienceData[];
   isButton?: boolean;
 }
 
@@ -56,7 +58,7 @@ const Footer = () => {
   return (
     <nav className="w-full min-h-fit p-6 flex mt-6">
       <div className="flex-grow flex">
-        {<FooterColumn title="Experiencia" elements={experienceColumns} isButton />}
+        {<FooterColumn title="Experiencia" elements={experienceData} isButton />}
         {<FooterColumn title="Proyectos" elements={projectsColumns} />}
       </div>
 

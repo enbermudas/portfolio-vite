@@ -51,7 +51,7 @@ const Skills = () => {
       <div className="flex z-10">
         <div className="flex-grow">
           <h2 className="text-2xl font-bold">Conocimientos y aptitudes</h2>
-          <p className="text-sm text-text-subdued">¿Qué necesitas?</p>
+          <p className="text-sm text-text-subdued">¿Qué puedo hacer?</p>
         </div>
 
         <div className="flex-none">

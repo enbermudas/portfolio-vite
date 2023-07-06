@@ -4,9 +4,8 @@ import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 export interface FooterElement {
   id: number;
-  key?: string;
   title: string;
-  link?: string;
+  link: string;
 }
 
 export interface FooterSocialLink {
@@ -35,39 +34,6 @@ export const projectsColumns: FooterElement[] = [
     id: 4,
     title: "Tetris",
     link: "https://enbermudas.github.io/tetris/",
-  },
-];
-
-export const experienceColumns: FooterElement[] = [
-  {
-    id: 1,
-    key: "kenility",
-    title: "Kenility",
-  },
-  {
-    id: 2,
-    key: "greenlight",
-    title: "Greenlight",
-  },
-  {
-    id: 3,
-    key: "mercadolibre",
-    title: "MercadoLibre",
-  },
-  {
-    id: 4,
-    key: "4rsoluciones",
-    title: "4r Soluciones S.R.L.",
-  },
-  {
-    id: 5,
-    key: "innova4j",
-    title: "Innova4J",
-  },
-  {
-    id: 6,
-    key: "proacce",
-    title: "Pro-Acce c.a.",
   },
 ];
 
