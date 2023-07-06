@@ -18,7 +18,7 @@ const getCurrentTab = (tab: AppTabs) => {
 
 const TabContainer = ({ activeTab }: TabContainerProps) => {
   return (
-    <Container className="w-full" noPadding>
+    <Container className="w-full overflow-auto" noPadding>
       {getCurrentTab(activeTab)}
     </Container>
   );

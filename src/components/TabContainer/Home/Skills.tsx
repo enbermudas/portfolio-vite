@@ -10,14 +10,14 @@ const SkillCard = ({ id, name, level, color, icon }: Skill) => {
   return (
     <div
       id={id}
-      className={`rounded-lg bg-background-section h-72 p-4 flex flex-col items-center relative hover:bg-background-highlight hover:text-[${color}]`}
+      className={`rounded-lg bg-background-section h-72 p-4 flex flex-col items-center relative hover:bg-background-highlight hover:text-[${color}] transition ease-in-out`}
     >
       <FontAwesomeIcon
         icon={icon}
         className="text-8xl mb-6 bg-background-elevatedBase rounded-full p-8 drop-shadow-xl w-[80px] h-[80px]"
       />
       <div className="font- text-2xl  self-start">{name}</div>
-      <span className="text-text-subdued self-start">{level}</span>
+      <span className="text-text-subdued self-start font-light">{level}</span>
     </div>
   );
 };

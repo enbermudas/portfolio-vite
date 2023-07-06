@@ -4,6 +4,7 @@ export default {
   theme: {
     colors: {
       background: {
+        social: "#292929",
         profile: "#535353",
         section: "#181818",
         base: "#121212",
