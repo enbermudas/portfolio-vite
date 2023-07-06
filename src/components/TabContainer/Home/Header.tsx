@@ -6,8 +6,8 @@ const Header = () => {
       <div className="bg-gradient-to-b from-[transparent] to-background-elevatedBase w-full h-full absolute left-0 bottom-0 z-0"></div>
 
       <div className="flex bottom-0 left-0 z-10">
-        <div className="avatar flex-none w-80 flex items-end justify-center">
-          <img className="rounded-full drop-shadow-2xl w-64" src={avatarImg} alt="avatar" />
+        <div className="avatar flex-none flex items-end mr-6">
+          <img className="rounded-full drop-shadow-2xl w-60" src={avatarImg} alt="avatar" />
         </div>
 
         <div className="content flex-grow flex flex-col justify-end">

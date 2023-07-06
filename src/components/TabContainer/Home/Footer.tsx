@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRef } from "react";
 
 import { experienceColumns, projectsColumns, socialLinks } from "./footer.data";
 import type { FooterElement, FooterSocialLink as SocialLinkType } from "./footer.data";
