@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRef } from "react";
 
 import { experienceColumns, projectsColumns, socialLinks } from "./footer.data";
-import type { FooterElement } from "./footer.data";
+import type { FooterElement, FooterSocialLink as SocialLinkType } from "./footer.data";
 
 interface FooterColumnProps {
   title: string;
@@ -9,19 +10,18 @@ interface FooterColumnProps {
   isButton?: boolean;
 }
 
-const FooterSocialLinks = () => {
+interface FooterSocialLinkProps {
+  link: SocialLinkType;
+}
+
+const FooterSocialLink = ({ link: { link, icon } }: FooterSocialLinkProps) => {
   return (
-    !!socialLinks.length &&
-    socialLinks.map(({ id, icon, link }) => {
-      return (
-        <a key={id} href={link} target="_blank">
-          <FontAwesomeIcon
-            icon={icon}
-            className="p-2 bg-background-social hover:bg-background-profile text-xl rounded-full cursor-pointer transition ease-in-out"
-          />
-        </a>
-      );
-    })
+    <a href={link} target="_blank">
+      <FontAwesomeIcon
+        icon={icon}
+        className="p-2 bg-background-social hover:bg-background-profile text-xl rounded-full cursor-pointer transition ease-in-out"
+      />
+    </a>
   );
 };
 
@@ -33,7 +33,7 @@ const FooterColumn = ({ title, elements, isButton = false }: FooterColumnProps) 
       <p className="mb-6 font-black">{title}</p>
       <ul>
         {!!elements.length &&
-          elements.map(({ id, title, link }) => {
+          elements.map(({ id, title, link, key }) => {
             return (
               <li key={id} className="mb-3">
                 {isButton ? (
@@ -61,7 +61,12 @@ const Footer = () => {
         {<FooterColumn title="Proyectos" elements={projectsColumns} />}
       </div>
 
-      <div className="flex-none flex justify-center gap-2">{<FooterSocialLinks />}</div>
+      <div className="flex-none flex justify-center gap-2 h-fit">
+        {!!socialLinks.length &&
+          socialLinks.map((link) => {
+            return <FooterSocialLink link={link} key={link.id} />;
+          })}
+      </div>
     </nav>
   );
 };

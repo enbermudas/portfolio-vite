@@ -16,9 +16,6 @@ export default {
         tintedBase: "hsla(0, 0%, 100%, 0.07)",
         tintedHighlight: "hsla(0, 0%, 100%, 0.1)",
         tintedPress: "hsla(0, 0%, 100%, 0.04)",
-        unsafeForSmallTextBase: "#121212",
-        unsafeForSmallTextHighlight: "#121212",
-        unsafeForSmallTextPress: "#121212",
       },
       text: {
         base: "#fff",
