@@ -1,5 +1,5 @@
 import noise from "@/assets/images/noise.svg";
-import getColsCount from "@/hooks/getColsCount";
+import getColsCount from "@/helpers/getColsCount";
 import { useEffect, useState } from "react";
 import { CSSProperties } from "react";
 import { useWindowSize } from "usehooks-ts";
