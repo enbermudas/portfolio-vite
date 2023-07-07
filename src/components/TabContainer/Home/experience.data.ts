@@ -7,7 +7,7 @@ export interface ExperienceData {
   stack: string;
 }
 
-const experienceData = [
+const experienceData: ExperienceData[] = [
   {
     id: 1,
     key: "kenility",

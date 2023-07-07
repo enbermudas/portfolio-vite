@@ -17,7 +17,7 @@ interface FooterSocialLinkProps {
 
 const FooterSocialLink = ({ link: { link, icon } }: FooterSocialLinkProps) => {
   return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noreferrer">
       <FontAwesomeIcon
         icon={icon}
         className="p-2 bg-background-social hover:bg-background-profile text-xl rounded-full cursor-pointer transition ease-in-out"
@@ -42,7 +42,7 @@ const FooterColumn = ({ title, elements, isButton = false }: FooterColumnProps) 
                     {title}
                   </button>
                 ) : (
-                  <a href={link} target="_blank" className={classes}>
+                  <a href={link} target="_blank" className={classes} rel="noreferrer">
                     {title}
                   </a>
                 )}
