@@ -1,4 +1,3 @@
-import noise from "@/assets/images/noise.svg";
 import getColsCount from "@/helpers/getColsCount";
 import { useEffect, useState } from "react";
 import { CSSProperties } from "react";
@@ -17,12 +16,12 @@ const Skills = () => {
 
   return (
     <section className="w-full min-h-fit flex flex-col p-6 gap-6 relative">
-      <div
+      {/* <div
         className="bg-background-profile z-0 w-full h-[160px] absolute left-0 top-0"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,.6) 0,#121212 100%),url(${noise})`,
         }}
-      ></div>
+      ></div> */}
 
       <div className="flex z-10">
         <div className="flex-grow">

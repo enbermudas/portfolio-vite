@@ -1,10 +1,9 @@
 import { useState } from "react";
 
 import MainMenu from "@/components/MainMenu";
+import { AppTabs } from "@/components/MainMenu/mainMenu.data";
 import QuickAccessMenu from "@/components/QuickAccessMenu";
 import TabContainer from "@/components/TabContainer";
-
-import { AppTabs } from "./components/mainMenu.data";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState<AppTabs>(AppTabs.HOME);
