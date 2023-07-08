@@ -1,7 +1,9 @@
-import { AppTabs } from "../../App";
 import Container from "../Container";
+import { AppTabs } from "../mainMenu.data";
+import Experience from "./Experience";
 import Home from "./Home";
-import Search from "./Search";
+import Projects from "./Projects";
+import Skills from "./Skills";
 
 interface TabContainerProps {
   activeTab: AppTabs;
@@ -10,7 +12,9 @@ interface TabContainerProps {
 const getCurrentTab = (tab: AppTabs) => {
   const obj = {
     [AppTabs.HOME]: <Home />,
-    [AppTabs.SEARCH]: <Search />,
+    [AppTabs.SKILLS]: <Skills />,
+    [AppTabs.PROJECTS]: <Projects />,
+    [AppTabs.EXPERIENCE]: <Experience />,
   };
 
   return obj[tab];

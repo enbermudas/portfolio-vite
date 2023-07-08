@@ -36,7 +36,7 @@ const Experience = () => {
       <div>
         {!!experienceData.length &&
           experienceData.map((exp) => {
-            return <ExperienceColumn experience={exp} />;
+            return <ExperienceColumn experience={exp} key={exp.id} />;
           })}
       </div>
     </section>

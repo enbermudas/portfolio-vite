@@ -4,10 +4,7 @@ import MainMenu from "@/components/MainMenu";
 import QuickAccessMenu from "@/components/QuickAccessMenu";
 import TabContainer from "@/components/TabContainer";
 
-export enum AppTabs {
-  HOME,
-  SEARCH,
-}
+import { AppTabs } from "./components/mainMenu.data";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState<AppTabs>(AppTabs.HOME);

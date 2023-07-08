@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import experienceData from "./experience.data";
-import type { ExperienceData } from "./experience.data";
+import experienceData from "../Experience/experience.data";
+import type { ExperienceData } from "../Experience/experience.data";
 import { projectsColumns, socialLinks } from "./footer.data";
 import type { FooterElement, FooterSocialLink as SocialLinkType } from "./footer.data";
 
