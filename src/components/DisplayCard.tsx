@@ -2,9 +2,9 @@ import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CSSProperties } from "react";
 
-import { ProjectData } from "./Projects/projects.data";
-import { SkillData, SkillLevel } from "./Skills/skills.data";
-import { skillTranslations } from "./Skills/skills.data";
+import { ProjectData } from "./TabContainer/Home/Projects/projects.data";
+import { SkillData, SkillLevel } from "./TabContainer/Home/Skills/skills.data";
+import { skillTranslations } from "./TabContainer/Home/Skills/skills.data";
 
 enum DisplayType {
   PROJECT,

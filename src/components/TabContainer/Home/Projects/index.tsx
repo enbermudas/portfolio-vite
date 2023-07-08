@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { CSSProperties } from "react";
 import { useWindowSize } from "usehooks-ts";
 
-import { ProjectDisplayCard } from "../DisplayCard";
+import { ProjectDisplayCard } from "../../../DisplayCard";
 import projectsData from "./projects.data";
 
 const Projects = () => {

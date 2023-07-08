@@ -1,7 +1,10 @@
 import avatarImg from "@/assets/images/avatar.jpeg";
 import noise from "@/assets/images/noise.svg";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="relative">
       <div className="bg-background-profile h-96 p-6 flex relative">
@@ -13,14 +16,14 @@ const Header = () => {
           </div>
 
           <div className="content flex-grow flex flex-col justify-end">
-            <span className="text-sm font-bold">Perfil</span>
+            <span className="text-sm font-bold">{t("header.profile")}</span>
 
             <h1 className="text-8xl font-black text-text-base tracking-tighter py-4">e.bermudez</h1>
 
             <div className="text-sm font-medium">
-              <span>ingeniero en sistemas</span>
-              <span className="before:content-['•'] before:m-2">desarrollador frontend</span>
-              <span className="before:content-['•'] before:m-2">27 años</span>
+              <span>{t("header.title")}</span>
+              <span className="before:content-['•'] before:m-2">{t("header.role")}</span>
+              <span className="before:content-['•'] before:m-2">{t("header.age")}</span>
             </div>
           </div>
         </div>

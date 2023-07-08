@@ -19,25 +19,25 @@ const mainMenuData: MenuOption[] = [
   {
     id: 1,
     tab: AppTabs.HOME,
-    title: "Inicio",
+    title: "mainMenu.home",
     icon: faHouse,
   },
   {
     id: 2,
     tab: AppTabs.SKILLS,
-    title: "Conocimientos",
+    title: "mainMenu.skills",
     icon: faBook,
   },
   {
     id: 3,
     tab: AppTabs.PROJECTS,
-    title: "Proyectos",
+    title: "mainMenu.projects",
     icon: faFolderOpen,
   },
   {
     id: 4,
     tab: AppTabs.EXPERIENCE,
-    title: "Experiencia",
+    title: "mainMenu.experience",
     icon: faStar,
   },
 ];
