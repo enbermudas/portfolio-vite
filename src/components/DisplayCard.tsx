@@ -1,10 +1,10 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CSSProperties } from "react";
+import { useTranslation } from "react-i18next";
 
 import { ProjectData } from "./TabContainer/Home/Projects/projects.data";
 import { SkillData, SkillLevel } from "./TabContainer/Home/Skills/skills.data";
-import { skillTranslations } from "./TabContainer/Home/Skills/skills.data";
 
 enum DisplayType {
   PROJECT,
@@ -37,13 +37,13 @@ export const ProjectDisplayCard = ({ id, name, description, image, link }: Proje
 };
 
 export const SkillDisplayCard = ({ id, name, level, color, icon }: SkillData) => {
-  const subTitle: string = skillTranslations[level];
+  const { t } = useTranslation();
 
   return (
     <DisplayCard
       id={String(id)}
       title={name}
-      subTitle={subTitle}
+      subTitle={t(level)}
       color={color}
       icon={icon}
       type={DisplayType.SKILL}

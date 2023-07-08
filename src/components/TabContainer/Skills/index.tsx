@@ -1,22 +1,23 @@
+import { useTranslation } from "react-i18next";
+
 import { SkillDisplayCard } from "@/components/DisplayCard";
-import skillsData, {
-  SkillTexts,
-  skillDescriptions,
-  skillTranslations,
-} from "@/components/TabContainer/Home/Skills/skills.data";
+import skillsData from "@/components/TabContainer/Home/Skills/skills.data";
+import { SkillLevel } from "@/components/TabContainer/Home/Skills/skills.data";
 
 const Skills = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="w-full min-h-fit flex flex-col p-6 gap-6 relative">
         <div className="flex z-10">
           <div className="flex-grow">
-            <h2 className="text-2xl font-bold">Conocimientos y aptitudes</h2>
-            <p className="text-sm text-text-subdued">¿Qué puedo hacer?</p>
+            <h2 className="text-2xl font-bold">{t("skills.skills.title")}</h2>
+            <p className="text-sm text-text-subdued">{t("skills.skills.subtitle")}</p>
           </div>
 
           <div className="flex-none">
-            <button className="text-text-subdued hover:underline underline-offset-4">Volver al inicio</button>
+            <button className="text-text-subdued hover:underline underline-offset-4">{t("cta.backHome")}</button>
           </div>
         </div>
 
@@ -33,16 +34,19 @@ const Skills = () => {
       <section className="w-full min-h-fit flex flex-col p-6 gap-6 relative">
         <div className="flex">
           <div className="flex-grow">
-            <h2 className="text-2xl font-bold">Leyenda</h2>
-            <p className="text-sm text-text-subdued">¿Favorito, proficiente... qué?</p>
+            <h2 className="text-2xl font-bold">{t("skills.captions.title")}</h2>
+            <p className="text-sm text-text-subdued">{t("skills.captions.subtitle")}</p>
           </div>
         </div>
 
-        <div>
-          {Object.keys(skillTranslations).map((key) => {
+        <div className="flex gap-6">
+          {Object.keys(SkillLevel).map((key) => {
             return (
-              <div>
-                {skillTranslations[key]}:{skillDescriptions[key]}
+              <div className="flex gap-2 flex-col" key={key}>
+                <div className="text-2xl">{t(`captions.titles.${SkillLevel[key as keyof typeof SkillLevel]}`)}</div>
+                <div className="text-text-subdued text-sm">
+                  {t(`captions.descriptions.${SkillLevel[key as keyof typeof SkillLevel]}`)}
+                </div>
               </div>
             );
           })}

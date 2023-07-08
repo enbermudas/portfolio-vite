@@ -6,7 +6,7 @@ import QuickAccessMenu from "@/components/QuickAccessMenu";
 import TabContainer from "@/components/TabContainer";
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState<AppTabs>(AppTabs.HOME);
+  const [activeTab, setActiveTab] = useState<AppTabs>(AppTabs.SKILLS);
 
   return (
     <div className="grid h-screen w-screen grid-cols-12 grid-rows-1 gap-2 bg-background-press p-2 text-text-base">

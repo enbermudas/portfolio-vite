@@ -20,12 +20,12 @@ import {
 import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 
 export enum SkillLevel {
-  FAVORITE,
-  PROFICIENT,
-  ADVANCED,
-  INTERMEDIATE,
-  BEGINNER,
-  ACQUAINTED,
+  FAVORITE = "favorite",
+  PROFICIENT = "proficient",
+  ADVANCED = "advanced",
+  INTERMEDIATE = "intermediate",
+  BEGINNER = "beginner",
+  ACQUAINTED = "acquainted",
 }
 
 export interface SkillData {
@@ -35,39 +35,6 @@ export interface SkillData {
   color: string;
   icon: IconDefinition;
 }
-
-export interface SkillTexts {
-  [SkillLevel.ACQUAINTED]: string;
-  [SkillLevel.BEGINNER]: string;
-  [SkillLevel.INTERMEDIATE]: string;
-  [SkillLevel.ADVANCED]: string;
-  [SkillLevel.PROFICIENT]: string;
-  [SkillLevel.FAVORITE]: string;
-}
-
-export const skillTranslations: SkillTexts = {
-  [SkillLevel.ACQUAINTED]: "Familiarizado",
-  [SkillLevel.BEGINNER]: "Principiante",
-  [SkillLevel.INTERMEDIATE]: "Intermedio",
-  [SkillLevel.ADVANCED]: "Avanzado",
-  [SkillLevel.PROFICIENT]: "Proficiente",
-  [SkillLevel.FAVORITE]: "Favorito",
-};
-
-export const skillDescriptions: SkillTexts = {
-  [SkillLevel.ACQUAINTED]:
-    "Poseo conocimientos básicos y estoy familiarizado con los conceptos y las tecnologías de programación. Puedo comprender el uso de las herramientas y modificar código existente de manera limitada, pero aún necesito apoyo y orientacfión para abordar proyectos más complejos.",
-  [SkillLevel.BEGINNER]:
-    "Tengo una compresión elemental de los conceptos básicos y las herramientas, pudiendo programar y hacer uso de herramientas simples con instrucciones directas.",
-  [SkillLevel.INTERMEDIATE]:
-    "Poseo conocimientos sólidos y una compresión adecuada de la herramienta o lenguaje. Puedo resolver problemas más complejos y trabajar en proyectos de tamaño mediano con cierto grado de independencia.",
-  [SkillLevel.ADVANCED]:
-    "Poseo conocimiento profundo de las tecnologías y lenguajes. Puedo abordar proyectos complejos con confianza. Tengo las habilidades para optimizar y mejorar el rendimiento del código. También puedo resolver problemas difíciles de manera eficiente.",
-  [SkillLevel.PROFICIENT]:
-    "Tengo habilidades avanzadas y amplio conocimiento en el área. Soy capaz de abordar proyectos desafiantes y producir soluciones de alta calidad. Tengo buen entendimiento de los principios fundamentales y soy capaz de trabajar de manera autónoma con poca supervisión.",
-  [SkillLevel.FAVORITE]:
-    "Además de tener habilidades técnicas sólidas, también he desarrollado un enfoque especializado y pasión por este lenguaje, herramienta o framework en particular. Tengo experiencia significativa y la comodidad para trabajar con ellas en cualquier momento.",
-};
 
 const skillsData: SkillData[] = [
   {
