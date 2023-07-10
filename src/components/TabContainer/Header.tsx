@@ -1,9 +1,25 @@
 import avatarImg from "@/assets/images/avatar.jpeg";
 import noise from "@/assets/images/noise.svg";
+import { Dispatch, RootState } from "@/store";
+import { Langs } from "@/store/models/lang";
 import { useTranslation } from "react-i18next";
+import { connect } from "react-redux";
 
-const Header = () => {
-  const { t } = useTranslation();
+interface HeaderProps {
+  lang: {
+    currentLang: Langs;
+  };
+  changeLang: (newLang: Langs) => void;
+}
+
+const Header = ({ lang: { currentLang }, changeLang }: HeaderProps) => {
+  const { t, i18n } = useTranslation();
+
+  const handleLangChange = () => {
+    const newLang = currentLang === Langs.ES ? Langs.EN : Langs.ES;
+    i18n.changeLanguage(newLang);
+    changeLang(newLang);
+  };
 
   return (
     <div className="relative">
@@ -35,8 +51,23 @@ const Header = () => {
           backgroundImage: `linear-gradient(rgba(0,0,0,.6) 0,#121212 100%),url(${noise})`,
         }}
       ></div>
+
+      <button
+        onClick={handleLangChange}
+        className="rounded-full bg-background-section text-text-base w-10 h-10 absolute top-4 right-4 transition-all ease-in-out hover:bg-text-base hover:text-background-section"
+      >
+        {currentLang}
+      </button>
     </div>
   );
 };
 
-export default Header;
+const mapState = (state: RootState) => ({
+  lang: state.lang,
+});
+
+const mapDispatch = (dispatch: Dispatch) => ({
+  changeLang: (newLang: Langs) => dispatch.lang.changeLang(newLang),
+});
+
+export default connect(mapState, mapDispatch)(Header);
