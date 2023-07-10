@@ -19,14 +19,14 @@ const ExperienceColumn = ({ experience: { id, title, date, role, stack } }: Expe
   const { t } = useTranslation();
 
   return (
-    <div className="grid grid-cols-[40px_2fr_2fr_minmax(120px,_1fr)] py-3 mb-2 rounded-lg hover:bg-background-elevatedBase  cursor-pointer transition ease-in-out">
-      <div className="flex justify-center items-center text-text-subdued">{id}</div>
+    <div className="grid grid-cols-2 sm:grid-cols-[40px_2fr_2fr_minmax(120px,_1fr)] py-3 mb-6 sm:mb-2 rounded-lg hover:bg-background-elevatedBase cursor-pointer transition ease-in-out">
+      <div className="justify-center items-center text-text-subdued invisible hidden sm:flex sm:visible">{id}</div>
       <div className="grid content-center">
         <div>{title}</div>
         <span className="text-text-subdued text-xs">{t(`jobs.${role}`)}</span>
       </div>
-      <div className="flex text-text-subdued text-sm items-center">{stack}</div>
-      <div className="flex items-center justify-end pr-4">{t(`jobs.${date}`)}</div>
+      <div className="text-text-subdued text-sm items-center invisible hidden sm:flex sm:visible">{stack}</div>
+      <div className="items-center justify-end pr-4 invisible hidden sm:flex sm:visible">{t(`jobs.${date}`)}</div>
     </div>
   );
 };

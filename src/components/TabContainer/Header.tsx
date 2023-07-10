@@ -27,19 +27,19 @@ const Header = ({ lang: { currentLang }, changeLang }: HeaderProps) => {
         <div className="bg-gradient-to-b from-[transparent] to-background-elevatedBase w-full h-full absolute left-0 bottom-0 z-0"></div>
 
         <div className="flex bottom-0 left-0 z-10">
-          <div className="avatar flex-none flex items-end mr-6">
+          <div className="avatar flex-none items-end mr-6 hidden sm:flex">
             <img className="rounded-full drop-shadow-2xl w-60" src={avatarImg} alt="avatar" />
           </div>
 
-          <div className="content flex-grow flex flex-col justify-end">
+          <div className="content flex-grow flex-col justify-end flex">
             <span className="text-sm font-bold">{t("header.profile")}</span>
 
-            <h1 className="text-8xl font-black text-text-base tracking-tighter py-4">e.bermudez</h1>
+            <h1 className="text-6xl lg:text-8xl font-black text-text-base tracking-tighter py-4">e.bermudez</h1>
 
-            <div className="text-sm font-medium">
+            <div className="text-sm font-medium flex flex-col md:flex-row">
               <span>{t("header.title")}</span>
-              <span className="before:content-['•'] before:m-2">{t("header.role")}</span>
-              <span className="before:content-['•'] before:m-2">{t("header.age")}</span>
+              <span className="md:before:content-['•'] md:before:m-2">{t("header.role")}</span>
+              <span className="md:before:content-['•'] md:before:m-2">{t("header.age")}</span>
             </div>
           </div>
         </div>

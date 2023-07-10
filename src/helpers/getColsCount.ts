@@ -1,5 +1,6 @@
 export default (width: number): number => {
-  if (width < 800) return 2;
+  if (width <= 655) return 1;
+  else if (width < 800) return 2;
   else if (width < 1100) return 3;
   else if (width < 1300) return 4;
   else if (width < 1600) return 5;

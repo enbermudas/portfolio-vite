@@ -46,7 +46,7 @@ const skillsData: SkillData[] = [
   },
   {
     id: "skill-js",
-    name: "Javascript",
+    name: "JS/TS",
     level: SkillLevel.FAVORITE,
     color: "#e4d04b",
     icon: faJs,

@@ -28,7 +28,7 @@ const Skills = ({ changeTab }: SkillProps) => {
     <section className="w-full min-h-fit flex flex-col p-6 gap-6 relative">
       <div className="flex z-10">
         <div className="flex-grow">
-          <h2 className="text-2xl font-bold">{t("home.skills.title")}</h2>
+          <h2 className="text-2xl font-bold truncate max-w-[200px]">{t("home.skills.title")}</h2>
           <p className="text-sm text-text-subdued">{t("home.skills.subtitle")}</p>
         </div>
 
@@ -43,7 +43,7 @@ const Skills = ({ changeTab }: SkillProps) => {
       </div>
 
       <div
-        className={`min-w-[372px] w-full gap-4 grid grid-cols-[repeat(var(--colsCount),minmax(0,1fr))]`}
+        className={`md:min-w-[372px] w-full gap-4 grid grid-cols-[repeat(var(--colsCount),minmax(0,1fr))]`}
         style={{ "--colsCount": colsCount } as CSSProperties}
       >
         {!!skillsData.length &&

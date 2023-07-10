@@ -32,6 +32,10 @@ export default {
         subtitle: "¿Qué puedo hacer?",
       },
     },
+    projects: {
+      title: "Proyectos",
+      subTitle: "Dale un vistazo a mis creaciones favoritas",
+    },
     jobs: {
       fe: "Desarrollador Frontend",
       ssfe: "Desarrollador Frontend Ssr",

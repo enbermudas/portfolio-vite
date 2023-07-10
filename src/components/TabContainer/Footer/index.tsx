@@ -59,8 +59,8 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <nav className="w-full min-h-fit p-6 flex mt-6 border-solid border-t border-background-section">
-      <div className="flex-grow flex">
+    <nav className="w-full min-h-fit p-6 flex mt-6 border-solid border-t border-background-section justify-center">
+      <div className="flex-grow md:flex md:visible hidden invisible">
         {<FooterColumn title={t("section.experience")} elements={experienceData} isButton />}
         {<FooterColumn title={t("section.projects")} elements={projectsColumns} />}
       </div>
