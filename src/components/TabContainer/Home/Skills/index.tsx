@@ -1,14 +1,21 @@
 import getColsCount from "@/helpers/getColsCount";
+import { Dispatch } from "@/store";
 import { useEffect, useState } from "react";
 import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
+import { connect } from "react-redux";
 import { useWindowSize } from "usehooks-ts";
 
 import { SkillDisplayCard } from "@/components/DisplayCard";
+import { AppTabs } from "@/components/MainMenu/mainMenu.data";
 
 import skillsData from "./skills.data";
 
-const Skills = () => {
+interface SkillProps {
+  changeTab: (newTab: AppTabs) => void;
+}
+
+const Skills = ({ changeTab }: SkillProps) => {
   const { t } = useTranslation();
   const [colsCount, setColsCount] = useState<number>(9);
   const { width } = useWindowSize();
@@ -26,7 +33,12 @@ const Skills = () => {
         </div>
 
         <div className="flex-none">
-          <button className="text-text-subdued hover:underline underline-offset-4">{t("cta.showAll")}</button>
+          <button
+            onClick={() => changeTab(AppTabs.SKILLS)}
+            className="text-text-subdued hover:underline underline-offset-4"
+          >
+            {t("cta.showAll")}
+          </button>
         </div>
       </div>
 
@@ -43,4 +55,8 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+const mapDispatch = (dispatch: Dispatch) => ({
+  changeTab: (newTab: AppTabs) => dispatch.tabs.changeTab(newTab),
+});
+
+export default connect(null, mapDispatch)(Skills);

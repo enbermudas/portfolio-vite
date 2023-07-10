@@ -1,10 +1,17 @@
+import { Dispatch } from "@/store";
 import { useTranslation } from "react-i18next";
+import { connect } from "react-redux";
 
 import { SkillDisplayCard } from "@/components/DisplayCard";
+import { AppTabs } from "@/components/MainMenu/mainMenu.data";
 import skillsData from "@/components/TabContainer/Home/Skills/skills.data";
 import { SkillLevel } from "@/components/TabContainer/Home/Skills/skills.data";
 
-const Skills = () => {
+interface SkillsProps {
+  changeTab: (newTab: AppTabs) => void;
+}
+
+const Skills = ({ changeTab }: SkillsProps) => {
   const { t } = useTranslation();
 
   return (
@@ -17,7 +24,12 @@ const Skills = () => {
           </div>
 
           <div className="flex-none">
-            <button className="text-text-subdued hover:underline underline-offset-4">{t("cta.backHome")}</button>
+            <button
+              onClick={() => changeTab(AppTabs.HOME)}
+              className="text-text-subdued hover:underline underline-offset-4"
+            >
+              {t("cta.backHome")}
+            </button>
           </div>
         </div>
 
@@ -49,4 +61,8 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+const mapDispatch = (dispatch: Dispatch) => ({
+  changeTab: (newTab: AppTabs) => dispatch.tabs.changeTab(newTab),
+});
+
+export default connect(null, mapDispatch)(Skills);

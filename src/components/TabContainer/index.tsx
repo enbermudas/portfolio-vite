@@ -1,3 +1,6 @@
+import { RootState } from "@/store";
+import { connect } from "react-redux";
+
 import Container from "../Container";
 import { AppTabs } from "../MainMenu/mainMenu.data";
 import Experience from "./Experience";
@@ -8,7 +11,9 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 
 interface TabContainerProps {
-  activeTab: AppTabs;
+  tabs: {
+    currentTab: AppTabs;
+  };
 }
 
 const getCurrentTab = (tab: AppTabs) => {
@@ -22,14 +27,18 @@ const getCurrentTab = (tab: AppTabs) => {
   return obj[tab];
 };
 
-const TabContainer = ({ activeTab }: TabContainerProps) => {
+const mapState = (state: RootState) => ({
+  tabs: state.tabs,
+});
+
+const TabContainer = ({ tabs: { currentTab } }: TabContainerProps) => {
   return (
     <Container className="w-full overflow-auto" noPadding>
       <Header />
-      {getCurrentTab(activeTab)}
+      {getCurrentTab(currentTab)}
       <Footer />
     </Container>
   );
 };
 
-export default TabContainer;
+export default connect(mapState)(TabContainer);

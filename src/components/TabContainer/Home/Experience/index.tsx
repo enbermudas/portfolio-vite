@@ -1,10 +1,18 @@
+import { Dispatch } from "@/store";
 import { useTranslation } from "react-i18next";
+import { connect } from "react-redux";
+
+import { AppTabs } from "@/components/MainMenu/mainMenu.data";
 
 import experienceData from "./experience.data";
 import type { ExperienceData } from "./experience.data";
 
 interface ExperienceColumnProps {
   experience: ExperienceData;
+}
+
+interface ExperienceProps {
+  changeTab: (newTab: AppTabs) => void;
 }
 
 const ExperienceColumn = ({ experience: { id, title, date, role, stack } }: ExperienceColumnProps) => {
@@ -23,7 +31,7 @@ const ExperienceColumn = ({ experience: { id, title, date, role, stack } }: Expe
   );
 };
 
-const Experience = () => {
+const Experience = ({ changeTab }: ExperienceProps) => {
   const { t } = useTranslation();
 
   return (
@@ -35,7 +43,12 @@ const Experience = () => {
         </div>
 
         <div className="flex-none">
-          <button className="text-text-subdued hover:underline underline-offset-4">{t("cta.showAll")}</button>
+          <button
+            className="text-text-subdued hover:underline underline-offset-4"
+            onClick={() => changeTab(AppTabs.EXPERIENCE)}
+          >
+            {t("cta.showAll")}
+          </button>
         </div>
       </div>
 
@@ -49,4 +62,8 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+const mapDispatch = (dispatch: Dispatch) => ({
+  changeTab: (newTab: AppTabs) => dispatch.tabs.changeTab(newTab),
+});
+
+export default connect(null, mapDispatch)(Experience);

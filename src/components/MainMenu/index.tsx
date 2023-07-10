@@ -1,18 +1,22 @@
+import { Dispatch, RootState } from "@/store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
+import { connect } from "react-redux";
 
 import Container from "../Container";
 import { AppTabs } from "./mainMenu.data";
 import mainMenuData from "./mainMenu.data";
 
 interface MainMenuProps {
-  activeTab: AppTabs;
-  onMenuButtonClick: (newTab: AppTabs) => void;
+  tabs: {
+    currentTab: AppTabs;
+  };
+  changeTab: (newTab: AppTabs) => void;
 }
 
-const MainMenu = ({ activeTab, onMenuButtonClick }: MainMenuProps) => {
+const MainMenu = ({ tabs: { currentTab }, changeTab }: MainMenuProps) => {
   const { t } = useTranslation();
 
   return (
@@ -29,8 +33,8 @@ const MainMenu = ({ activeTab, onMenuButtonClick }: MainMenuProps) => {
               >
                 <button
                   className="flex items-center gap-5 text-[color:--text-color] hover:underline underline-offset-4"
-                  style={{ "--text-color": activeTab === tab ? "#fff" : "#a7a7a7" } as CSSProperties}
-                  onClick={() => onMenuButtonClick(tab)}
+                  style={{ "--text-color": currentTab === tab ? "#fff" : "#a7a7a7" } as CSSProperties}
+                  onClick={() => changeTab(tab)}
                 >
                   <FontAwesomeIcon icon={icon} className="inline h-6" />
                   <span className="flex content-center items-center">{t(title)}</span>
@@ -43,4 +47,12 @@ const MainMenu = ({ activeTab, onMenuButtonClick }: MainMenuProps) => {
   );
 };
 
-export default MainMenu;
+const mapState = (state: RootState) => ({
+  tabs: state.tabs,
+});
+
+const mapDispatch = (dispatch: Dispatch) => ({
+  changeTab: (newTab: AppTabs) => dispatch.tabs.changeTab(newTab),
+});
+
+export default connect(mapState, mapDispatch)(MainMenu);
