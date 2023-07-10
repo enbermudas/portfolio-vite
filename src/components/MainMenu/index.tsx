@@ -20,7 +20,7 @@ const MainMenu = ({ tabs: { currentTab }, changeTab }: MainMenuProps) => {
   const { t } = useTranslation();
 
   return (
-    <Container>
+    <Container id="mainmenu">
       <ul className="py-3 font-bold">
         {!!mainMenuData.length &&
           mainMenuData.map(({ id, tab, title, icon }) => {

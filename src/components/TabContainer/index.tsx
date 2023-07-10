@@ -30,7 +30,7 @@ const mapState = (state: RootState) => ({
 
 const TabContainer = ({ tabs: { currentTab } }: TabContainerProps) => {
   return (
-    <Container className="w-full overflow-auto" noPadding>
+    <Container id="tabcontainer" className="w-full overflow-auto" noPadding>
       <Header />
       {getCurrentTab(currentTab)}
       <Footer />
