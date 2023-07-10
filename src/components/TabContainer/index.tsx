@@ -1,6 +1,7 @@
 import Container from "../Container";
 import { AppTabs } from "../MainMenu/mainMenu.data";
 import Experience from "./Experience";
+import Footer from "./Footer";
 import Header from "./Header";
 import Home from "./Home";
 import Projects from "./Projects";
@@ -26,6 +27,7 @@ const TabContainer = ({ activeTab }: TabContainerProps) => {
     <Container className="w-full overflow-auto" noPadding>
       <Header />
       {getCurrentTab(activeTab)}
+      <Footer />
     </Container>
   );
 };

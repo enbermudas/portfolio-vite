@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslation } from "react-i18next";
 
-import experienceData from "../Experience/experience.data";
-import type { ExperienceData } from "../Experience/experience.data";
+import experienceData from "../Home/Experience/experience.data";
+import type { ExperienceData } from "../Home/Experience/experience.data";
 import { projectsColumns, socialLinks } from "./footer.data";
 import type { FooterElement, FooterSocialLink as SocialLinkType } from "./footer.data";
 
@@ -34,7 +35,7 @@ const FooterColumn = ({ title, elements, isButton = false }: FooterColumnProps) 
       <p className="mb-6 font-black">{title}</p>
       <ul>
         {!!elements.length &&
-          elements.map(({ id, title, link, key }) => {
+          elements.map(({ id, title, link }) => {
             return (
               <li key={id} className="mb-3">
                 {isButton ? (
@@ -55,11 +56,13 @@ const FooterColumn = ({ title, elements, isButton = false }: FooterColumnProps) 
 };
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
-    <nav className="w-full min-h-fit p-6 flex mt-6">
+    <nav className="w-full min-h-fit p-6 flex mt-6 border-solid border-t border-background-section">
       <div className="flex-grow flex">
-        {<FooterColumn title="Experiencia" elements={experienceData} isButton />}
-        {<FooterColumn title="Proyectos" elements={projectsColumns} />}
+        {<FooterColumn title={t("section.experience")} elements={experienceData} isButton />}
+        {<FooterColumn title={t("section.projects")} elements={projectsColumns} />}
       </div>
 
       <div className="flex-none flex justify-center gap-2 h-fit">

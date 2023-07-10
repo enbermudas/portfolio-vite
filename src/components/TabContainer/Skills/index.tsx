@@ -31,18 +31,11 @@ const Skills = () => {
         </div>
       </section>
 
-      <section className="w-full min-h-fit flex flex-col p-6 gap-6 relative">
-        <div className="flex">
-          <div className="flex-grow">
-            <h2 className="text-2xl font-bold">{t("skills.captions.title")}</h2>
-            <p className="text-sm text-text-subdued">{t("skills.captions.subtitle")}</p>
-          </div>
-        </div>
-
-        <div className="flex gap-6">
+      <section className="w-full min-h-fit flex flex-col p-6 relative">
+        <div className="flex flex-row flex-wrap gap-6 w-full justify-center">
           {Object.keys(SkillLevel).map((key) => {
             return (
-              <div className="flex gap-2 flex-col" key={key}>
+              <div className="flex gap-4 flex-col sm:basis-full lg:basis-1/4" key={key}>
                 <div className="text-2xl">{t(`captions.titles.${SkillLevel[key as keyof typeof SkillLevel]}`)}</div>
                 <div className="text-text-subdued text-sm">
                   {t(`captions.descriptions.${SkillLevel[key as keyof typeof SkillLevel]}`)}

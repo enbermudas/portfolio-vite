@@ -18,7 +18,7 @@ const ExperienceColumn = ({ experience: { id, title, date, role, stack } }: Expe
         <span className="text-text-subdued text-xs">{t(`jobs.${role}`)}</span>
       </div>
       <div className="flex text-text-subdued text-sm items-center">{stack}</div>
-      <div className="flex items-center justify-end pr-4">{date}</div>
+      <div className="flex items-center justify-end pr-4">{t(`jobs.${date}`)}</div>
     </div>
   );
 };

@@ -13,7 +13,7 @@ const experienceData: ExperienceData[] = [
     key: "kenility",
     title: "Kenility",
     role: "fe",
-    date: "nov. 2021 - actualidad",
+    date: "date1",
     stack: "Typescript (React)",
   },
   {
@@ -21,7 +21,7 @@ const experienceData: ExperienceData[] = [
     key: "greenlight",
     title: "Greenlight",
     role: "ssfe",
-    date: "dic. 2021 - jun. 2023",
+    date: "date2",
     stack: "Typescript (React) - Node (Express)",
   },
   {
@@ -29,7 +29,7 @@ const experienceData: ExperienceData[] = [
     key: "mercadolibre",
     title: "MercadoLibre",
     role: "ssfe",
-    date: "ago. 2020 - nov. 2021",
+    date: "date3",
     stack: "Javascript (React) - Node (Express)",
   },
   {
@@ -37,7 +37,7 @@ const experienceData: ExperienceData[] = [
     key: "4rsoluciones",
     title: "4r Soluciones S.R.L.",
     role: "ssfs",
-    date: "nov. 2019 - jun. 2020",
+    date: "date4",
     stack: "Node.js (Express) - Javascript (Vue.js, React), SQL (MySQL)",
   },
   {
@@ -45,7 +45,7 @@ const experienceData: ExperienceData[] = [
     key: "innova4j",
     title: "Innova4J",
     role: "jrfs",
-    date: "jun. 2019 - oct. 2019",
+    date: "date5",
     stack: "Javascript (Vue.js) - Node.js (Express) - SQL (PostgreSQL)",
   },
   {
@@ -53,7 +53,7 @@ const experienceData: ExperienceData[] = [
     key: "proacce",
     title: "Pro-Acce c.a.",
     role: "jrfs",
-    date: "mar. 2018 - sept. 2008",
+    date: "date6",
     stack: "PHP (Laravel)",
   },
 ];

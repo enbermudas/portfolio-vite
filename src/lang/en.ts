@@ -10,7 +10,7 @@ export default {
       role: "frontend developer",
       age: "27 years old",
     },
-    mainMenu: {
+    section: {
       home: "Home",
       skills: "Knowledge and skills",
       projects: "Projects",
@@ -31,16 +31,18 @@ export default {
         title: "Knowledge and skills",
         subtitle: "What can I do?",
       },
-      captions: {
-        title: "Captions",
-        subtitle: "What do they mean?",
-      },
     },
     jobs: {
       fe: "Frontend Developer",
       ssfe: "Ssr Frontend Developer",
       ssfs: "Ssr Fullstack Developer",
       jrfs: "Jr Fullstack Developer",
+      date1: "nov. 2021 - currently",
+      date2: "dec. 2021 - jun. 2023",
+      date3: "ago. 2020 - nov. 2021",
+      date4: "nov. 2019 - jun. 2020",
+      date5: "jun. 2019 - oct. 2019",
+      date6: "mar. 2018 - sept. 2008",
     },
     captions: {
       titles: {
@@ -50,10 +52,13 @@ export default {
         intermediate: "Intermediate",
         beginner: "Beginner",
         acquainted: "Acquainted",
+        library: "Utility library",
+        poemsSearch: "Poems search eng.",
+        minigame: "Minigame",
       },
       descriptions: {
         favorite:
-          "In addition to having solid technical skills, I have also developed a specialized focus and passion for this particular language, tool or framework. I have significant experience and the comfort to work with them at any time.",
+          "In addition to having solid technical skills, I have also developed a specialized focus and passion for these particular languages, tools or frameworks. I have significant experience and the comfort to work with them at any time.",
         proficient:
           "I have advanced skills and extensive knowledge in the area. I am able to tackle challenging projects and produce high quality solutions. I have a good understanding of fundamental principles and am able to work autonomously with little supervision.",
         advanced:

@@ -53,6 +53,8 @@ export const SkillDisplayCard = ({ id, name, level, color, icon }: SkillData) =>
 };
 
 const DisplayCard = ({ id, title, subTitle, type, color, icon, image, link, level }: DisplayCardProps) => {
+  const { t } = useTranslation();
+
   return (
     <div
       id={id}
@@ -71,10 +73,10 @@ const DisplayCard = ({ id, title, subTitle, type, color, icon, image, link, leve
       )}
       <div className="font-bold text-2xl self-start truncate w-full">{title}</div>
       <span
-        className="text-text-subdued self-start font-light"
+        className="text-text-subdued self-start font-light capitalize"
         style={{ color: level === SkillLevel.FAVORITE ? "#1ed760" : "#a7a7a7" }}
       >
-        {subTitle}
+        {t(`captions.titles.${subTitle}`)}
       </span>
     </div>
   );

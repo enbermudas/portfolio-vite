@@ -10,7 +10,7 @@ export default {
       role: "desarrollador frontend",
       age: "27 años",
     },
-    mainMenu: {
+    section: {
       home: "Inicio",
       skills: "Conocimiento y Aptitudes",
       projects: "Proyectos",
@@ -31,16 +31,18 @@ export default {
         title: "Conocimientos y aptitudes",
         subtitle: "¿Qué puedo hacer?",
       },
-      captions: {
-        title: "Leyenda",
-        subtitle: "¿Qué significan?",
-      },
     },
     jobs: {
       fe: "Desarrollador Frontend",
       ssfe: "Desarrollador Frontend Ssr",
       ssfs: "Desarrollador Fullstack Ssr",
       jrfs: "Desarrollador Fullstack Jr",
+      date1: "nov. 2021 - actualidad",
+      date2: "dic. 2021 - jun. 2023",
+      date3: "ago. 2020 - nov. 2021",
+      date4: "nov. 2019 - jun. 2020",
+      date5: "jun. 2019 - oct. 2019",
+      date6: "mar. 2018 - sept. 2008",
     },
     captions: {
       titles: {
@@ -50,10 +52,13 @@ export default {
         intermediate: "Intermedio",
         beginner: "Principiante",
         acquainted: "Familiarizado",
+        library: "Librería utilitaria",
+        poemsSearch: "Búsqueda de poemas",
+        minigame: "Minijuego",
       },
       descriptions: {
         favorite:
-          "Además de tener habilidades técnicas sólidas, también he desarrollado un enfoque especializado y pasión por este lenguaje, herramienta o framework en particular. Tengo experiencia significativa y la comodidad para trabajar con ellas en cualquier momento.",
+          "Además de tener habilidades técnicas sólidas, también he desarrollado un enfoque especializado y pasión por estos lenguajes, herramientas o frameworks en particular. Tengo experiencia significativa y la comodidad para trabajar con ellas en cualquier momento.",
         proficient:
           "Tengo habilidades avanzadas y amplio conocimiento en el área. Soy capaz de abordar proyectos desafiantes y producir soluciones de alta calidad. Tengo buen entendimiento de los principios fundamentales y soy capaz de trabajar de manera autónoma con poca supervisión.",
         advanced:
