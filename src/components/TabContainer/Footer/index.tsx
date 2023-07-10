@@ -19,7 +19,10 @@ const FooterSocialLink = ({ link: { link, icon } }: FooterSocialLinkProps) => {
 
 const Footer = () => {
   return (
-    <nav className="w-full min-h-fit p-6 flex mt-6 border-solid border-t border-background-section justify-center">
+    <nav
+      data-testid="footer"
+      className="w-full min-h-fit p-6 flex mt-6 border-solid border-t border-background-section justify-center"
+    >
       <div className="flex-none flex justify-center gap-2 h-fit">
         {!!socialLinks.length &&
           socialLinks.map((link) => {

@@ -34,6 +34,7 @@ const Skills = ({ changeTab }: SkillsProps) => {
         </div>
 
         <div
+          data-testid="skills-list"
           className={`md:min-w-[372px] w-full gap-4 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-9`}
         >
           {!!skillsData.length &&
@@ -44,7 +45,7 @@ const Skills = ({ changeTab }: SkillsProps) => {
       </section>
 
       <section className="w-full min-h-fit flex flex-col p-6 relative">
-        <div className="flex flex-row flex-wrap gap-6 w-full justify-center">
+        <div data-testid="skills-captions" className="flex flex-row flex-wrap gap-6 w-full justify-center">
           {Object.keys(SkillLevel).map((key) => {
             return (
               <div className="flex gap-4 flex-col sm:basis-full lg:basis-1/4" key={key}>

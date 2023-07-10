@@ -34,15 +34,6 @@ After taking a look at the documentation and testing Vitest on smaller projects,
 
 I decided to have a way to change my portfolio's language in a single click and this is why there is a i18n library in it: [reacti18next](https://react.i18next.com/). Nothing fancy or complicated.
 
-## To-do
-
-- [x] i18n support for Spanish and English languages
-- [ ] Key bindings for easier navigation
-- [ ] Interactive guide
-- [x] Unit tests
-- [ ] Integration tests
-- [x] Code coverage
-
 ## Contact
 
 - Email: <enrique.bermudez.dev@gmail.com>
