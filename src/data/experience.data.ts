@@ -5,6 +5,7 @@ export interface ExperienceData {
   role: string;
   date: string;
   stack: string;
+  link: string;
 }
 
 const experienceData: ExperienceData[] = [
@@ -15,6 +16,7 @@ const experienceData: ExperienceData[] = [
     role: "fe",
     date: "date1",
     stack: "Typescript (React)",
+    link: "https://www.linkedin.com/company/kenility/",
   },
   {
     id: 2,
@@ -23,6 +25,7 @@ const experienceData: ExperienceData[] = [
     role: "ssfe",
     date: "date2",
     stack: "Typescript (React) - Node (Express)",
+    link: "https://www.linkedin.com/company/greenlightcard/",
   },
   {
     id: 3,
@@ -31,6 +34,7 @@ const experienceData: ExperienceData[] = [
     role: "ssfe",
     date: "date3",
     stack: "Javascript (React) - Node (Express)",
+    link: "https://www.linkedin.com/company/mercadolibre/",
   },
   {
     id: 4,
@@ -39,6 +43,7 @@ const experienceData: ExperienceData[] = [
     role: "ssfs",
     date: "date4",
     stack: "Node.js (Express) - Javascript (Vue.js, React), SQL (MySQL)",
+    link: "https://www.linkedin.com/company/crombie/",
   },
   {
     id: 5,
@@ -47,6 +52,7 @@ const experienceData: ExperienceData[] = [
     role: "jrfs",
     date: "date5",
     stack: "Javascript (Vue.js) - Node.js (Express) - SQL (PostgreSQL)",
+    link: "https://www.linkedin.com/company/innova4j/",
   },
   {
     id: 6,
@@ -55,6 +61,7 @@ const experienceData: ExperienceData[] = [
     role: "jrfs",
     date: "date6",
     stack: "PHP (Laravel)",
+    link: "https://www.linkedin.com/company/pro-acce/",
   },
 ];
 

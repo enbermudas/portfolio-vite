@@ -1,11 +1,11 @@
+import projectsData from "@/data/projects.data";
 import getColsCount from "@/helpers/getColsCount";
 import { useEffect, useState } from "react";
 import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 import { useWindowSize } from "usehooks-ts";
 
-import { ProjectDisplayCard } from "../../../DisplayCard";
-import projectsData from "./projects.data";
+import { ProjectDisplayCard } from "@/components/DisplayCard";
 
 const Projects = () => {
   const [colsCount, setColsCount] = useState<number>(9);
@@ -22,10 +22,6 @@ const Projects = () => {
         <div className="flex-grow">
           <h2 className="text-2xl font-bold">{t("projects.title")}</h2>
           <p className="text-sm text-text-subdued">{t("projects.subTitle")}</p>
-        </div>
-
-        <div className="flex-none">
-          <button className="text-text-subdued hover:underline underline-offset-4">{t("cta.showAll")}</button>
         </div>
       </div>
 

@@ -1,11 +1,11 @@
+import { AppTabs } from "@/data/mainMenu.data";
+import skillsData from "@/data/skills.data";
+import { SkillLevel } from "@/data/skills.data";
 import { Dispatch } from "@/store";
 import { useTranslation } from "react-i18next";
 import { connect } from "react-redux";
 
 import { SkillDisplayCard } from "@/components/DisplayCard";
-import { AppTabs } from "@/components/MainMenu/mainMenu.data";
-import skillsData from "@/components/TabContainer/Home/Skills/skills.data";
-import { SkillLevel } from "@/components/TabContainer/Home/Skills/skills.data";
 
 interface SkillsProps {
   changeTab: (newTab: AppTabs) => void;

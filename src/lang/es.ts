@@ -4,6 +4,18 @@ export default {
       showAll: "Mostrar todas",
       backHome: "Volver al inicio",
     },
+    quickInfo: {
+      title: {
+        aboutMe: "Sobre mí",
+        portfolio: "Portafolios",
+      },
+      content: {
+        aboutMe:
+          "¡Hola! Mi nombre es Enrique Bermúdez, pero todos me dicen Kike. Soy un ingenierio en sistemas y desarrollador web frontend. Me encanta programar en mi tiempo libre y puedes ver algunos de mis proyectos en este portafolios, el resto se encuentra en mi cuenta de Github. Mi lenguaje de programación favorito es Javascript/Typescript, seguido de cerca por Python.",
+        portfolio:
+          'Este portafolios fue hecho con Vite, empleando la plantilla de React-Typescript. Hay un montón de detalles más respecto a las librerías y metodologías que utilicé en él, suficientes como para ocupar toda esta columna. Puedes visitar mi cuenta de Github y ver el código de la aplicación en el proyecto "portfolio-vite"',
+      },
+    },
     header: {
       profile: "Perfil",
       title: "ingeniero en sistemas",
@@ -12,13 +24,13 @@ export default {
     },
     section: {
       home: "Inicio",
-      skills: "Conocimiento y Aptitudes",
+      skills: "Conocimiento",
       projects: "Proyectos",
       experience: "Experiencia",
     },
     home: {
       skills: {
-        title: "Conocimientos y aptitudes",
+        title: "Conocimientos",
         subtitle: "¿Qué puedo hacer?",
       },
       experience: {
@@ -28,7 +40,7 @@ export default {
     },
     skills: {
       skills: {
-        title: "Conocimientos y aptitudes",
+        title: "Conocimientos",
         subtitle: "¿Qué puedo hacer?",
       },
     },
@@ -59,6 +71,8 @@ export default {
         library: "Librería utilitaria",
         poemsSearch: "Búsqueda de poemas",
         minigame: "Minijuego",
+        middleware: "Middleware",
+        portfolio: "Portafolios",
       },
       descriptions: {
         favorite:

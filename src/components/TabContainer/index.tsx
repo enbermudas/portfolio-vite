@@ -1,13 +1,12 @@
+import { AppTabs } from "@/data/mainMenu.data";
 import { RootState } from "@/store";
 import { connect } from "react-redux";
 
-import Container from "../Container";
-import { AppTabs } from "../MainMenu/mainMenu.data";
-import Experience from "./Experience";
+import Container from "@/components/Container";
+
 import Footer from "./Footer";
 import Header from "./Header";
 import Home from "./Home";
-import Projects from "./Projects";
 import Skills from "./Skills";
 
 interface TabContainerProps {
@@ -20,8 +19,6 @@ const getCurrentTab = (tab: AppTabs) => {
   const obj = {
     [AppTabs.HOME]: <Home />,
     [AppTabs.SKILLS]: <Skills />,
-    [AppTabs.PROJECTS]: <Projects />,
-    [AppTabs.EXPERIENCE]: <Experience />,
   };
 
   return obj[tab];

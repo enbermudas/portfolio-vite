@@ -1,3 +1,5 @@
+import { AppTabs } from "@/data/mainMenu.data";
+import skillsData from "@/data/skills.data";
 import getColsCount from "@/helpers/getColsCount";
 import { Dispatch } from "@/store";
 import { useEffect, useState } from "react";
@@ -7,9 +9,6 @@ import { connect } from "react-redux";
 import { useWindowSize } from "usehooks-ts";
 
 import { SkillDisplayCard } from "@/components/DisplayCard";
-import { AppTabs } from "@/components/MainMenu/mainMenu.data";
-
-import skillsData from "./skills.data";
 
 interface SkillProps {
   changeTab: (newTab: AppTabs) => void;

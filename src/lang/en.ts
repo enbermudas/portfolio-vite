@@ -4,6 +4,18 @@ export default {
       showAll: "Show all",
       backHome: "Go back to home",
     },
+    quickInfo: {
+      title: {
+        aboutMe: "About me",
+        portfolio: "Portfolio",
+      },
+      content: {
+        aboutMe:
+          "Hello! My name is Enrique Bermudez, but everyone calls me Kike. I'm a software engineer and frontend web developer. I love programming in my free time and you can see some of my projects in this portfolio, the rest can be found in my Github account. My favorite programming language is Javascript/Typescript, closely followed by Python.",
+        portfolio:
+          'This portfolio was made with Vite, using the React-Typescript template. There are a lot more details about the libraries and methodologies I used in it, enough to occupy this whole column. You can visit my Github account and see the application\'s code in the "portfolio-vite" project.',
+      },
+    },
     header: {
       profile: "Profile",
       title: "software engineer",
@@ -12,13 +24,13 @@ export default {
     },
     section: {
       home: "Home",
-      skills: "Knowledge and skills",
+      skills: "Knowledge",
       projects: "Projects",
       experience: "Experience",
     },
     home: {
       skills: {
-        title: "Knowledge and skills",
+        title: "Knowledge",
         subtitle: "What can I do?",
       },
       experience: {
@@ -28,7 +40,7 @@ export default {
     },
     skills: {
       skills: {
-        title: "Knowledge and skills",
+        title: "Knowledge",
         subtitle: "What can I do?",
       },
     },
@@ -59,6 +71,8 @@ export default {
         library: "Utility library",
         poemsSearch: "Poems search eng.",
         minigame: "Minigame",
+        middleware: "Middleware",
+        portfolio: "Portafolios",
       },
       descriptions: {
         favorite:

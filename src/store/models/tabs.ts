@@ -1,6 +1,5 @@
+import { AppTabs } from "@/data/mainMenu.data";
 import { createModel } from "@rematch/core";
-
-import { AppTabs } from "@/components/MainMenu/mainMenu.data";
 
 import { RootModel } from ".";
 

@@ -1,4 +1,4 @@
-import { faBook, faFolderOpen, faHouse, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 export interface MenuOption {
@@ -11,8 +11,6 @@ export interface MenuOption {
 export enum AppTabs {
   HOME,
   SKILLS,
-  PROJECTS,
-  EXPERIENCE,
 }
 
 const mainMenuData: MenuOption[] = [
@@ -27,18 +25,6 @@ const mainMenuData: MenuOption[] = [
     tab: AppTabs.SKILLS,
     title: "section.skills",
     icon: faBook,
-  },
-  {
-    id: 3,
-    tab: AppTabs.PROJECTS,
-    title: "section.projects",
-    icon: faFolderOpen,
-  },
-  {
-    id: 4,
-    tab: AppTabs.EXPERIENCE,
-    title: "section.experience",
-    icon: faStar,
   },
 ];
 

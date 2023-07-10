@@ -1,3 +1,5 @@
+import { AppTabs } from "@/data/mainMenu.data";
+import mainMenuData from "@/data/mainMenu.data";
 import { Dispatch, RootState } from "@/store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
@@ -5,9 +7,7 @@ import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 import { connect } from "react-redux";
 
-import Container from "../Container";
-import { AppTabs } from "./mainMenu.data";
-import mainMenuData from "./mainMenu.data";
+import Container from "@/components/Container";
 
 interface MainMenuProps {
   tabs: {
@@ -21,7 +21,7 @@ const MainMenu = ({ tabs: { currentTab }, changeTab }: MainMenuProps) => {
 
   return (
     <Container>
-      <ul className="p-2 py-3 font-bold">
+      <ul className="py-3 font-bold">
         {!!mainMenuData.length &&
           mainMenuData.map(({ id, tab, title, icon }) => {
             return (

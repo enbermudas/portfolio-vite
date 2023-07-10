@@ -1,10 +1,9 @@
+import { ProjectData } from "@/data/projects.data";
+import { SkillData, SkillLevel } from "@/data/skills.data";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
-
-import { ProjectData } from "./TabContainer/Home/Projects/projects.data";
-import { SkillData, SkillLevel } from "./TabContainer/Home/Skills/skills.data";
 
 enum DisplayType {
   PROJECT,
@@ -16,20 +15,19 @@ interface DisplayCardProps {
   title: string;
   subTitle: string;
   type: DisplayType;
+  icon: IconDefinition;
   link?: string;
   color?: string;
-  icon?: IconDefinition;
-  image?: string;
   level?: SkillLevel;
 }
 
-export const ProjectDisplayCard = ({ id, name, description, image, link }: ProjectData) => {
+export const ProjectDisplayCard = ({ id, title, description, icon, link }: ProjectData) => {
   return (
     <DisplayCard
       id={String(id)}
-      title={name}
+      title={title}
       subTitle={description}
-      image={image}
+      icon={icon}
       link={link}
       type={DisplayType.PROJECT}
     />
@@ -68,7 +66,10 @@ const DisplayCard = ({ id, title, subTitle, type, color, icon, image, link, leve
         />
       ) : (
         <a href={link} target="_blank" rel="noreferrer">
-          <img className="rounded-full drop-shadow-xl mb-6 p-2" src={image} alt={`project-${id}`} />
+          <FontAwesomeIcon
+            icon={icon as IconDefinition}
+            className="text-8xl mb-6 bg-background-elevatedBase rounded-full p-8 drop-shadow-xl w-[80px] h-[80px]"
+          />
         </a>
       )}
       <div className="font-bold text-2xl self-start truncate w-full">{title}</div>
