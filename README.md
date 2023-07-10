@@ -4,9 +4,8 @@
 
 ## To-do
 
-- [ ] i18n support for Spanish and English languages
+- [x] i18n support for Spanish and English languages
 - [ ] Key bindings for easier navigation
-- [ ] Skeleton for lazy loading
 - [ ] Interactive guide
 - [x] Unit tests
 - [ ] Integration tests
