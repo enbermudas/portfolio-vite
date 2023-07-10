@@ -15,7 +15,7 @@ const projectsData: ProjectData[] = [
     title: "Portfolio Vite",
     description: "portfolio",
     icon: faUser,
-    link: "https://github.com/enbermudas/portfolio",
+    link: "https://github.com/enbermudas/portfolio-vite",
   },
   {
     id: 2,
