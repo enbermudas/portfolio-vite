@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 
-enum DisplayType {
+export enum DisplayType {
   PROJECT,
   SKILL,
 }
@@ -50,11 +50,12 @@ export const SkillDisplayCard = ({ id, name, level, color, icon }: SkillData) =>
   );
 };
 
-const DisplayCard = ({ id, title, subTitle, type, color, icon, image, link, level }: DisplayCardProps) => {
+const DisplayCard = ({ id, title, subTitle, type, color, icon, link, level }: DisplayCardProps) => {
   const { t } = useTranslation();
 
   return (
     <div
+      data-testid={`displaycard-${type}-${id}`}
       id={id}
       className={`rounded-lg bg-background-section h-72 p-4 flex flex-col items-center relative hover:bg-background-highlight hover:text-[color:--color] transition ease-in-out`}
       style={{ "--color": color } as CSSProperties}

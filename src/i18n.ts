@@ -3,6 +3,7 @@ import { initReactI18next } from "react-i18next";
 
 import en from "./lang/en";
 import es from "./lang/es";
+import { Langs } from "./store/models/lang";
 
 const resources = {
   es,
@@ -11,7 +12,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "es",
+  lng: Langs.ES,
   interpolation: {
     escapeValue: false,
   },
