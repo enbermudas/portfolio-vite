@@ -46,13 +46,6 @@ const projectsData: ProjectData[] = [
     link: "https://enbermudas.github.io/guessme/",
   },
   {
-    id: 5,
-    title: "Tetris",
-    description: "minigame",
-    icon: faGamepad,
-    link: "https://enbermudas.github.io/tetris/",
-  },
-  {
     id: 6,
     title: "Windows 98",
     description: "portfolio",
