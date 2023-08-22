@@ -58,7 +58,7 @@ export default {
       date3: "ago. 2020 - nov. 2021",
       date4: "nov. 2019 - jun. 2020",
       date5: "jun. 2019 - oct. 2019",
-      date6: "mar. 2018 - sept. 2008",
+      date6: "mar. 2018 - sept. 2018",
     },
     captions: {
       titles: {
